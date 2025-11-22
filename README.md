@@ -4,6 +4,7 @@ An AI agent system that helps infrastructure investors, telecom operators, and d
 Built with IBM watsonx Orchestrate for the Agentic AI Hackathon 2025
 
 ***Problem Statement***
+
 Telecommunications operators and infrastructure investors face significant challenges when planning network deployments in Africa:
 
 Limited Data Integration: Socio-economic data, infrastructure mapping, and market analysis exist in silos
@@ -14,6 +15,7 @@ Resource Constraints: Small teams can't analyse 16 SADC countries simultaneously
 Cost of Inaction: Delayed deployments mean 400M+ unconnected Africans continue without digital access, while operators lose $40B+ in potential revenue.
 
 ***Solution: Multi-Agent Intelligence System***
+
 An orchestrated AI agent system that combines geospatial analysis, economic modelling, and market intelligence to identify optimal infrastructure deployment locations in minutes instead of weeks.
 Key Capabilities
 ✅ Coverage Gap Analysis - Identify underserved settlements within seconds
@@ -23,7 +25,9 @@ Key Capabilities
 ✅ Regional Comparison - Benchmark across 16 SADC countries
 
 ***Architecture***
+
 Multi-Agent System Design
+
 ┌─────────────────────────────────────────────────────────┐
 │         INFRASTRUCTURE INVESTMENT ORCHESTRATOR          │
 │              (Main Coordinating Agent)                   │
@@ -38,6 +42,7 @@ Multi-Agent System Design
 └─────────────┘ └──────────┘ └──────────────┘
 
 ****Agent Roles****
+
 1. Infrastructure Investment Orchestrator (Main Agent)
     - Routes complex queries to specialist agents
     - Synthesises multi-agent insights
@@ -56,6 +61,7 @@ Multi-Agent System Design
     - Infrastructure dependency mapping
 
 ***IBM watsonx Orchestrate Integration***
+
 How watsonx Orchestrate Powers This Solution
 1. Agent Orchestration
     - Multi-agent coordination using watsonx Orchestrate's agent collaboration framework
@@ -79,20 +85,23 @@ How watsonx Orchestrate Powers This Solution
 
 
 ***Data Sources***
+
 Geospatial Data
-    Settlements: 50,000+ locations across 16 SADC countries (OpenStreetMap)
-    Telecom Towers: Existing infrastructure mapped by operator and technology
+    - Settlements: 50,000+ locations across 16 SADC countries (OpenStreetMap)
+    - Telecom Towers: Existing infrastructure mapped by operator and technology
 
 Socio-Economic Indicators
-    World Development Indicators (WDI): 200+ metrics from World Bank
-    Findex Database: Financial inclusion indicators
-    Logistics Performance Index: Infrastructure quality metrics
-    Electricity Access: African Infrastructure Database
+    - World Development Indicators (WDI): 200+ metrics from World Bank
+    - Findex Database: Financial inclusion indicators
+    - Logistics Performance Index: Infrastructure quality metrics
+    - Electricity Access: African Infrastructure Database
 
 Coverage
+
     The 16 SADC Countries: Angola, Botswana, Comoros, DR Congo, Eswatini, Lesotho, Madagascar, Malawi, Mauritius, Mozambique, Namibia, Seychelles, South Africa, Tanzania, Zambia, Zimbabwe
 
 ***Technical Stack***
+
 | ****Component****    | ****Technology****              |
 | ---------------- | --------------------------- |
 | Agent Framework  | IBM watsonx Orchestrate ADK |
