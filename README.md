@@ -29,27 +29,16 @@ Key Capabilities
 Multi-Agent System Design
 
 ┌─────────────────────────────────────────────────────────┐
-
 │         INFRASTRUCTURE INVESTMENT ORCHESTRATOR          │
-
 │              (Main Coordinating Agent)                   │
-
 └─────────────────────┬───────────────────────────────────┘
-
                       │
-
         ┌─────────────┼─────────────┐
-
         │             │             │
-
 ┌───────▼─────┐ ┌────▼─────┐ ┌────▼─────────┐
-
 │  Coverage   │ │  Market  │ │ Risk &       │
-
 │  Gap        │ │ Readiness│ │ Compliance   │
-
 │  Analyst    │ │ Evaluator│ │ Advisor      │
-
 └─────────────┘ └──────────┘ └──────────────┘
 
 ****Agent Roles****
