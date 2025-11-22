@@ -29,16 +29,27 @@ Key Capabilities
 Multi-Agent System Design
 
 ┌─────────────────────────────────────────────────────────┐
+
 │         INFRASTRUCTURE INVESTMENT ORCHESTRATOR          │
+
 │              (Main Coordinating Agent)                   │
+
 └─────────────────────┬───────────────────────────────────┘
+
                       │
+
         ┌─────────────┼─────────────┐
+
         │             │             │
+
 ┌───────▼─────┐ ┌────▼─────┐ ┌────▼─────────┐
+
 │  Coverage   │ │  Market  │ │ Risk &       │
+
 │  Gap        │ │ Readiness│ │ Compliance   │
+
 │  Analyst    │ │ Evaluator│ │ Advisor      │
+
 └─────────────┘ └──────────┘ └──────────────┘
 
 ****Agent Roles****
@@ -87,13 +98,19 @@ How watsonx Orchestrate Powers This Solution
 ***Data Sources***
 
 Geospatial Data
+
     - Settlements: 50,000+ locations across 16 SADC countries (OpenStreetMap)
+    
     - Telecom Towers: Existing infrastructure mapped by operator and technology
 
 Socio-Economic Indicators
+
     - World Development Indicators (WDI): 200+ metrics from World Bank
+    
     - Findex Database: Financial inclusion indicators
+    
     - Logistics Performance Index: Infrastructure quality metrics
+    
     - Electricity Access: African Infrastructure Database
 
 Coverage
