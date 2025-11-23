@@ -1,0 +1,51 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Calculate Readiness Index",
+    "description": "Calculates infrastructure investment readiness score based on internet adoption, electricity access, and GDP",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rylee-colorfast-berenice.ngrok-free.dev"
+    }
+  ],
+  "paths": {
+    "/tools/calculate_readiness_index": {
+      "post": {
+        "summary": "Calculate Readiness Index",
+        "description": "Returns ranked list of SADC countries by readiness score",
+        "operationId": "calculateReadinessIndex",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string",
+                    "description": "Specific country name or null for all countries",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Analyze Multiple Countries",
+    "description": "Comprehensive analysis of multiple SADC countries including readiness, coverage gaps, and deployment costs",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rylee-colorfast-berenice.ngrok-free.dev"
+    }
+  ],
+  "paths": {
+    "/tools/analyze_multiple_countries": {
+      "post": {
+        "summary": "Analyze Multiple Countries",
+        "description": "Returns comprehensive analysis for 2 or more countries",
+        "operationId": "analyzeMultipleCountries",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "countries": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of SADC country names to analyze (e.g., ['Zambia', 'Mozambique', 'Tanzania'])"
+                  },
+                  "num_towers": {
+                    "type": "integer",
+                    "description": "Number of towers for cost estimation",
+                    "default": 20
+                  },
+                  "max_distance_km": {
+                    "type": "number",
+                    "description": "Maximum distance to tower for coverage analysis",
+                    "default": 15.0
+                  }
+                },
+                "required": ["countries"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

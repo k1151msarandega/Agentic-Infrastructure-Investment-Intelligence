@@ -1,0 +1,56 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Find Coverage Gaps",
+    "description": "Identifies settlements without adequate telecom tower coverage in SADC countries",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rylee-colorfast-berenice.ngrok-free.dev"
+    }
+  ],
+  "paths": {
+    "/tools/find_coverage_gaps": {
+      "post": {
+        "summary": "Find Coverage Gaps",
+        "description": "Returns list of underserved settlements with GPS coordinates",
+        "operationId": "findCoverageGaps",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string",
+                    "description": "SADC country name (e.g., Zimbabwe, South Africa)"
+                  },
+                  "max_distance_km": {
+                    "type": "number",
+                    "description": "Maximum distance to tower in kilometers",
+                    "default": 10.0
+                  }
+                },
+                "required": ["country"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rank Settlements by Priority",
+    "description": "Intelligently ranks underserved settlements by investment priority using geographic heuristics including infrastructure proximity, population clustering, and strategic positioning",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rylee-colorfast-berenice.ngrok-free.dev"
+    }
+  ],
+  "paths": {
+    "/tools/rank_settlements_by_priority": {
+      "post": {
+        "summary": "Rank Settlements by Investment Priority",
+        "description": "Returns ranked list of underserved settlements with priority scores and investment rationale",
+        "operationId": "rankSettlementsByPriority",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string",
+                    "description": "SADC country name"
+                  },
+                  "max_distance_km": {
+                    "type": "number",
+                    "description": "Maximum distance from tower to consider underserved",
+                    "default": 15.0
+                  },
+                  "top_n": {
+                    "type": "integer",
+                    "description": "Number of top priority settlements to return",
+                    "default": 20
+                  }
+                },
+                "required": ["country"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

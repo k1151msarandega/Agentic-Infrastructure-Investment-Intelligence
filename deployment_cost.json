@@ -1,0 +1,55 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Estimate Deployment Cost",
+    "description": "Estimates infrastructure deployment costs including towers, backhaul, and power infrastructure",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://rylee-colorfast-berenice.ngrok-free.dev"
+    }
+  ],
+  "paths": {
+    "/tools/estimate_deployment_cost": {
+      "post": {
+        "summary": "Estimate Deployment Cost",
+        "description": "Accounts for country-specific logistics challenges",
+        "operationId": "estimateDeploymentCost",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "num_towers": {
+                    "type": "integer",
+                    "description": "Number of towers to deploy"
+                  },
+                  "country": {
+                    "type": "string",
+                    "description": "SADC country name"
+                  }
+                },
+                "required": ["num_towers", "country"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
