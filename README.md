@@ -1,3 +1,5 @@
+>>Access solution and database on Google Drive https://drive.google.com/drive/folders/1N6yiVDRNSCqGz56M_Sy3_r3Rb-R7U0W3?usp=sharing
+
 # Infrastructure-Investment-Intelligence-Agent
 An AI agent system that helps infrastructure investors, telecom operators, and development organisations make data-driven decisions about where to deploy connectivity infrastructure across Africa.
 
